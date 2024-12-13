@@ -13,4 +13,5 @@ int main(){
         first=second;
         second=third;
     }
+    return 0;
 }
