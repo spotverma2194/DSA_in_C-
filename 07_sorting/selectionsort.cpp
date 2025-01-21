@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[5]={8,4,13,7,5};
-    int n=sizeof(arr);
-    for(int i=0;i<4;i++){
+    int arr[]={8,4,13,7,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n-1;i++){
         int min_index=i;
-        for(int j=i+1;j<5;j++){
+        for(int j=i+1;j<n;j++){
             if(arr[j]<arr[min_index]){
                 min_index=j;
             }
@@ -16,7 +16,7 @@ int main(){
             arr[min_index]=temp;
         }
     }
-    for(int i=0;i<5;i++){
+    for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
     return 0;
